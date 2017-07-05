@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
   def index
+  	@all_post = Post.all
   end
   def show
-  	@yes = params[:fname]
+  	Post.create(title: params[:title],
+  			 	content: params[:content])
+  	redirect_to '/home/index'
   end
 
 end

@@ -1,4 +1,10 @@
  <form action="/home/show" method="post">
-  input: <input type="text" name="fname"><br>
+  title: <input type="text" name="title"><br>
+  content: <input type="text" name="content"><br>
   <input type="submit" value="Submit">
 </form> 
+
+<% @all_post.each do |a| %>
+	<%=a.title%><br>
+	<%=a.content%><hr>
+<% end %>
